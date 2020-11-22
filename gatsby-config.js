@@ -6,5 +6,28 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-typescript",
+    'gatsby-plugin-styled-components',
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    },
+  ],
+  siteMetadata: {
+    title: `jonas-laux-website`,
+    description: `super website`,
+    author: `Jonas Laux`,
+    url: `https://jonas-laux.com`,
+  },
 }
